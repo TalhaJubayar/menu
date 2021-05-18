@@ -1,0 +1,65 @@
+*{margin: 0; padding: 0;}
+
+.menu{
+    background: rgb(134, 30, 30);
+}
+.menu ul{
+    text-align: center;
+}
+.menu ul li{
+    display: inline-block;
+    margin-left: -5px; 
+    position: relative; 
+}
+.menu ul li a{
+    padding: 10px 20px;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    border-right: 1px solid #fff;
+}
+.menu ul li:first-child a{
+    border-left: 1px solid #fff;
+}
+.menu ul li:hover > a{
+    background: rgb(77, 10, 10);
+}
+/* drop */
+
+
+.menu ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(134, 30, 30) ;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.menu ul li ul li{
+    margin-left: 0;
+    border-top: 1px solid #fff;
+}
+.menu ul li ul li a{
+    border: none;
+    
+}
+.menu ul li ul li:first-child a{
+    border: none;
+   
+}
+.menu ul li:hover > ul{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* sub drop  */
+
+.menu ul li ul li ul{
+    position: absolute;
+    top: 0;
+    left: 102%;
+}
